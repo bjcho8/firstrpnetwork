@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def rplist1(request):
+    return render(request, 'rpregi/rplist1.html', {})
