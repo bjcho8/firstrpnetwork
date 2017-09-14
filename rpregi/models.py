@@ -4,13 +4,11 @@ from django.utils import timezone
 class Rplist(models.Model):
     researcher = models.ForeignKey('auth.User')
     ptid = models.CharField(max_length=20)
-    age = models.IntegerField()
-    sex = models.CharField(max_length=1)
-    summary = models.TextField()
-    fundusRt = models.ImageField()
-    fundusLt = models.ImageField()
-    VisualfieldRt = models.ImageField()
-    VisualfieldLt = models.ImageField()
+    age = models.IntegerField(null=True)
+    sex = models.CharField(max_length=1, null=True)
+    summary = models.TextField(null=True)
+    fundusRt = models.ImageField(default=None, null=True)
+    fundusLt = models.ImageField(default=None, null=True)
 
     created_date = models.DateTimeField(
             default=timezone.now)
