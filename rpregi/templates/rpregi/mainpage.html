@@ -17,8 +17,10 @@
             <tr> <td>patient ID</td> <td> researcher </td></tr>
             {% for rppt in alllist %}
                 <tr>
-                    <td> <h3><a href=""> {{ rppt.ptid }} </a></h3> </td>
-                    <td> <h3>{{ rppt.researcher }} </h3> </td>
+                    <td> <a href=""> {{ rppt.ptid }} </a> </td>
+                    <td> {{ rppt.researcher }} </td>
+                    <td> <img src="{{ rppt.fundusRt }}" /> </td>
+                    <td> <img src="{{ rppt.fundusLt }}" /> </td>
                 </tr>
             {% endfor %}
         </table>

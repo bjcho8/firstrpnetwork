@@ -7,6 +7,11 @@ class Rplist(models.Model):
     age = models.IntegerField()
     sex = models.CharField(max_length=1)
     summary = models.TextField()
+    fundusRt = models.ImageField()
+    fundusLt = models.ImageField()
+    VisualfieldRt = models.ImageField()
+    VisualfieldLt = models.ImageField()
+
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
